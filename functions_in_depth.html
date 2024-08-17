@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Functions in Depth</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Importing Modules in Recolon" href="imports.html" />
+  <link rel="prev" title="Advanced Data Structures" href="advanced_data_structures.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Functions in Depth</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#introduction-to-functions" class="reference internal">Introduction to Functions</a></li>
+                
+                  <li class="toctree-l2"><a href="#function-parameters-and-arguments" class="reference internal">Function Parameters and Arguments</a></li>
+                
+                  <li class="toctree-l2"><a href="#function-scope" class="reference internal">Function Scope</a></li>
+                
+                  <li class="toctree-l2"><a href="#return-values" class="reference internal">Return Values</a></li>
+                
+                  <li class="toctree-l2"><a href="#best-practices-for-writing-functions" class="reference internal">Best Practices for Writing Functions</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Functions in Depth</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="advanced_data_structures.html"
+       title="previous chapter">← Advanced Data Structures</a>
+  </li>
+  <li class="next">
+    <a href="imports.html"
+       title="next chapter">Importing Modules in Recolon →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="functions-in-depth">
+<h1>Functions in Depth<a class="headerlink" href="#functions-in-depth" title="Link to this heading">¶</a></h1>
+<p>In Recolon, functions are a core concept that allow you to encapsulate and reuse code. In this chapter, we’ll dive deeper into the world of functions, exploring parameters, scope, return values, and best practices.</p>
+<section id="introduction-to-functions">
+<h2>Introduction to Functions<a class="headerlink" href="#introduction-to-functions" title="Link to this heading">¶</a></h2>
+<p>Functions in Recolon are defined using the <cite>fn</cite> keyword, followed by the function name, a set of parameters in parentheses, and a body enclosed in curly brackets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">my_function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;This is a function!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">my_function</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Functions are essential for creating modular, reusable code. By breaking your program into functions, you can organize your code more effectively and reduce repetition.</p>
+</section>
+<section id="function-parameters-and-arguments">
+<h2>Function Parameters and Arguments<a class="headerlink" href="#function-parameters-and-arguments" title="Link to this heading">¶</a></h2>
+<p>Functions can take parameters, which are variables passed into the function when it is called. These parameters allow you to customize the function’s behavior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">);</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In the example above, <cite>name</cite> is a parameter of the <cite>greet</cite> function. When the function is called with an argument, such as <cite>“Alice”</cite>, the function logs a personalized greeting.</p>
+<p>If you need to pass multiple parameters, simply separate them with commas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="function-scope">
+<h2>Function Scope<a class="headerlink" href="#function-scope" title="Link to this heading">¶</a></h2>
+<p>In Recolon, variables declared within a function are local to that function. This means they cannot be accessed outside of the function. Understanding the scope of variables is crucial for avoiding conflicts and bugs in your code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">example</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>  <span class="c1"># Outputs 10</span>
+<span class="p">}</span>
+
+<span class="n">example</span><span class="p">();</span>
+<span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>  <span class="c1"># Error: x is not defined</span>
+</pre></div>
+</div>
+<p>In this example, the variable <cite>x</cite> is defined inside the <cite>example</cite> function. Attempting to access <cite>x</cite> outside the function results in an error because <cite>x</cite> is local to the function.</p>
+</section>
+<section id="return-values">
+<h2>Return Values<a class="headerlink" href="#return-values" title="Link to this heading">¶</a></h2>
+<p>Functions in Recolon can return values using the <cite>return</cite> keyword. However, it is important to place the <cite>return</cite> statement at the end of the function. If the <cite>return</cite> statement is not at the end, the function will return <cite>nil</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">product</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="n">log</span><span class="p">(</span><span class="n">product</span><span class="p">);</span>  <span class="c1"># Outputs 20</span>
+</pre></div>
+</div>
+<p>The example above demonstrates a function <cite>multiply</cite> that returns the product of two numbers. The <cite>return</cite> statement is correctly placed at the end of the function.</p>
+<p>Incorrect placement of <cite>return</cite>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">faulty_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">var</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>  <span class="c1"># This line will never be executed</span>
+<span class="p">}</span>
+
+<span class="n">log</span><span class="p">(</span><span class="n">faulty_function</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>  <span class="c1"># Outputs 6, but this is not the best practice</span>
+</pre></div>
+</div>
+<p>Placing the <cite>return</cite> statement before the end of the function can result in unreachable code, leading to confusion and potential errors.</p>
+</section>
+<section id="best-practices-for-writing-functions">
+<h2>Best Practices for Writing Functions<a class="headerlink" href="#best-practices-for-writing-functions" title="Link to this heading">¶</a></h2>
+<p>Here are some best practices to follow when writing functions in Recolon:</p>
+<ol class="arabic simple">
+<li><p><strong>Keep Functions Small and Focused:</strong> Each function should do one thing and do it well. If your function is getting too long or complex, consider breaking it into smaller functions.</p></li>
+<li><p><strong>Avoid Side Effects:</strong> Functions should not modify variables outside their scope unless explicitly designed to do so. This makes your code more predictable and easier to debug.</p></li>
+<li><p><strong>Consistent Naming Conventions:</strong> Use clear and consistent names for your functions and parameters. Function names should typically be verbs, while parameters should describe the data they hold.</p></li>
+<li><p><strong>Place `return` Statements at the End:</strong> Ensure that the <cite>return</cite> statement is the last line in your function to avoid returning <cite>nil</cite> or having unreachable code.</p></li>
+</ol>
+<p>By following these best practices, you can write clean, efficient, and maintainable code in Recolon.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="advanced_data_structures.html"
+       title="previous chapter">← Advanced Data Structures</a>
+  </li>
+  <li class="next">
+    <a href="imports.html"
+       title="next chapter">Importing Modules in Recolon →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

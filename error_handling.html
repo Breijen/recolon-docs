@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Error Handling in Recolon</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Standard Built-in Modules" href="standard_modules.html" />
+  <link rel="prev" title="Importing Modules in Recolon" href="imports.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Error Handling in Recolon</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#basic-error-handling" class="reference internal">Basic Error Handling</a></li>
+                
+                  <li class="toctree-l2"><a href="#built-in-error-functions" class="reference internal">Built-in Error Functions</a></li>
+                
+                  <li class="toctree-l2"><a href="#custom-error-messages" class="reference internal">Custom Error Messages</a></li>
+                
+                  <li class="toctree-l2"><a href="#common-pitfalls-and-debugging" class="reference internal">Common Pitfalls and Debugging</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Error Handling in Recolon</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="imports.html"
+       title="previous chapter">← Importing Modules in Recolon</a>
+  </li>
+  <li class="next">
+    <a href="standard_modules.html"
+       title="next chapter">Standard Built-in Modules →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="error-handling-in-recolon">
+<h1>Error Handling in Recolon<a class="headerlink" href="#error-handling-in-recolon" title="Link to this heading">¶</a></h1>
+<p>As your programs become more complex, handling errors and unexpected conditions becomes crucial. Recolon provides basic error handling mechanisms through the <cite>log();</cite> and <cite>err();</cite> functions. This chapter will guide you on how to effectively use these functions to detect and manage errors in your code.</p>
+<section id="basic-error-handling">
+<h2>Basic Error Handling<a class="headerlink" href="#basic-error-handling" title="Link to this heading">¶</a></h2>
+<p>In Recolon, you can use conditional statements (<cite>if</cite>, <cite>elif</cite>, <cite>else</cite>) to check for error conditions and respond accordingly. When you encounter an error or want to track the flow of your program, you can use the <cite>log();</cite> function to output messages for debugging or informational purposes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error: Division by zero is not allowed.&quot;</span><span class="p">);</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">nil</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>  <span class="c1"># This will trigger an error message.</span>
+</pre></div>
+</div>
+<p>In the example above, the <cite>err();</cite> function is used to output an error message when an attempt is made to divide by zero. The function then returns <cite>nil</cite>, signaling that the operation could not be completed.</p>
+</section>
+<section id="built-in-error-functions">
+<h2>Built-in Error Functions<a class="headerlink" href="#built-in-error-functions" title="Link to this heading">¶</a></h2>
+<p>Recolon includes two built-in functions for error handling:</p>
+<ul>
+<li><p><strong>`log();`</strong>: This function is used to output informational messages during the execution of your program. It’s useful for debugging and tracking the flow of your code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">greet_user</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;Greeting user: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">message</span> <span class="o">=</span> <span class="n">greet_user</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">);</span>  <span class="c1"># Outputs &quot;Greeting user: Alice&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>                     <span class="c1"># Outputs &quot;Hello, Alice!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>`err();`</strong>: This function is used to output error messages. It’s intended to be used when your program encounters a situation that prevents it from proceeding as expected.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">open_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">file</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error: Filename cannot be empty.&quot;</span><span class="p">);</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">nil</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1"># Proceed to open the file...</span>
+<span class="p">}</span>
+
+<span class="n">open_file</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>  <span class="c1"># Outputs &quot;Error: Filename cannot be empty.&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="custom-error-messages">
+<h2>Custom Error Messages<a class="headerlink" href="#custom-error-messages" title="Link to this heading">¶</a></h2>
+<p>You can customize error messages to provide more context or specific details about what went wrong in your program. This can make debugging easier and help you quickly identify the source of an issue.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">calculate_area</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">width</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error: Both length and width must be positive values. Received length: &quot;</span> <span class="o">+</span> <span class="n">length</span> <span class="o">+</span> <span class="s2">&quot;, width: &quot;</span> <span class="o">+</span> <span class="n">width</span><span class="p">);</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">nil</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">area</span> <span class="o">=</span> <span class="n">calculate_area</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>  <span class="c1"># Outputs a custom error message with specific details.</span>
+</pre></div>
+</div>
+<p>In this example, the error message is tailored to include the actual values that caused the error, making it easier to diagnose the problem.</p>
+</section>
+<section id="common-pitfalls-and-debugging">
+<h2>Common Pitfalls and Debugging<a class="headerlink" href="#common-pitfalls-and-debugging" title="Link to this heading">¶</a></h2>
+<p>When developing in Recolon, you might encounter some common issues. Here are a few tips to help you debug effectively:</p>
+<ul class="simple">
+<li><p><strong>Unexpected `nil` Values:</strong> If a function is returning <cite>nil</cite> unexpectedly, check if you’ve correctly placed your <cite>return</cite> statements. Remember that Recolon returns <cite>nil</cite> if no explicit return statement is reached at the end of a function.</p></li>
+<li><p><strong>Conditional Errors:</strong> Use <cite>err();</cite> within conditional statements to catch and report errors. This is particularly useful when dealing with user input or operations that can fail (e.g., file I/O).</p></li>
+<li><p><strong>Log Everything:</strong> When debugging complex logic, sprinkle <cite>log();</cite> statements throughout your code. This will help you trace the execution flow and pinpoint where things go wrong.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;Processing data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="o">==</span> <span class="n">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error: Data cannot be nil.&quot;</span><span class="p">);</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">nil</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Further processing...</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By following these practices and utilizing <cite>log();</cite> and <cite>err();</cite>, you can effectively manage and debug errors in your Recolon programs, ensuring they run smoothly.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="imports.html"
+       title="previous chapter">← Importing Modules in Recolon</a>
+  </li>
+  <li class="next">
+    <a href="standard_modules.html"
+       title="next chapter">Standard Built-in Modules →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

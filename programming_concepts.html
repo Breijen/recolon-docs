@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Common Programming Concepts</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Advanced Data Structures" href="advanced_data_structures.html" />
+  <link rel="prev" title="Building a Basic Program: Rock, Paper, Scissors" href="rock_paper_scissors.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Common Programming Concepts</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#variables-and-mutability" class="reference internal">Variables and Mutability</a></li>
+                
+                  <li class="toctree-l2"><a href="#data-types" class="reference internal">Data Types</a></li>
+                
+                  <li class="toctree-l2"><a href="#functions" class="reference internal">Functions</a></li>
+                
+                  <li class="toctree-l2"><a href="#comments" class="reference internal">Comments</a></li>
+                
+                  <li class="toctree-l2"><a href="#control-flow" class="reference internal">Control Flow</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Common Programming Concepts</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="rock_paper_scissors.html"
+       title="previous chapter">← Building a Basic Program: Rock, Paper, Scissors</a>
+  </li>
+  <li class="next">
+    <a href="advanced_data_structures.html"
+       title="next chapter">Advanced Data Structures →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="common-programming-concepts">
+<h1>Common Programming Concepts<a class="headerlink" href="#common-programming-concepts" title="Link to this heading">¶</a></h1>
+<p>This section covers the fundamental concepts you need to understand when programming in Recolon.</p>
+<section id="variables-and-mutability">
+<h2>Variables and Mutability<a class="headerlink" href="#variables-and-mutability" title="Link to this heading">¶</a></h2>
+<p>In Recolon, variables are declared using the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword. By default, all variables in Recolon are mutable, meaning their values can be changed after they are initialized.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>If you want to make a variable immutable, you can use the <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword instead.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Attempting to reassign a value to <code class="docutils literal notranslate"><span class="pre">y</span></code> will result in a compilation error.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike some languages, Recolon does not require an explicit type declaration for variables, as it uses type inference to determine the type of the variable based on the initial value.</p>
+</div>
+</section>
+<section id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Link to this heading">¶</a></h2>
+<p>Recolon supports several basic data types, including:</p>
+<ul>
+<li><p><strong>Numbers</strong>: Represented by integers and floating-point numbers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">int_num</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">float_num</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Strings</strong>: Textual data enclosed in double quotes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello, Recolon!&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Booleans</strong>: Logical values represented by <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">is_valid</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">is_empty</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>True and false should always be lowercase.</p>
+</div>
+</div></blockquote>
+<ul>
+<li><p><strong>Arrays</strong>: Ordered collections of elements.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Structs</strong>: Custom data types that group related variables together.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Player</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Unnamed&quot;</span><span class="p">,</span>
+    <span class="n">score</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Recolon also supports more complex types, but these are the basics you need to know to get started.</p>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<p>Functions in Recolon are defined using the <code class="docutils literal notranslate"><span class="pre">fn</span></code> keyword, followed by the function name and a set of parentheses. The function body is enclosed in curly braces.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Recolon&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Functions can take parameters and return values using the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="nb">sum</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>  <span class="o">//</span> <span class="nb">sum</span> <span class="n">now</span> <span class="n">holds</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h2>
+<p>Comments in Recolon are denoted by the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Anything following the <code class="docutils literal notranslate"><span class="pre">#</span></code> on a line will be ignored by the interpreter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>  <span class="c1"># This is a comment</span>
+<span class="c1"># This entire line is a comment</span>
+</pre></div>
+</div>
+<p>Use comments to explain code, describe what functions do, or to temporarily disable lines of code.</p>
+</section>
+<section id="control-flow">
+<h2>Control Flow<a class="headerlink" href="#control-flow" title="Link to this heading">¶</a></h2>
+<p>Recolon supports standard control flow structures, including:</p>
+<ul>
+<li><p><strong>Conditional Statements</strong>: <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> are used to control the flow of the program based on conditions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;x is positive&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">elif</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;x is negative&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="s2">&quot;x is zero&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Loops</strong>: <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops are used to repeat code multiple times.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Compose</strong>: Recolon introduces a unique looping construct called compose, which operates similarly to a while true loop. This loop continuously runs during the entire runtime of your program, making it ideal for scenarios where you need ongoing execution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">compose</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1"># Your code goes here</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This construct is particularly useful for tasks that require constant monitoring, updating, or interaction without a predefined end. However, it’s important to manage the code inside the compose loop carefully to avoid infinite loops or performance issues.</p>
+<ul>
+<li><p><strong>No Recursion Allowed</strong>: Recolon does not support recursion due to the potential risks of stack overflow, infinite loops, and the complexity it introduces into the control flow. Instead, Recolon encourages iterative approaches using loops for repetitive tasks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All return statements in Recolon must be at the end of the function. This requirement ensures that functions have a clear and predictable exit point, enhancing code readability and maintainability.</p>
+</div>
+</li>
+</ul>
+<p>By understanding these control flow constructs and restrictions, you’ll be able to write clear, efficient, and safe Recolon programs.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="rock_paper_scissors.html"
+       title="previous chapter">← Building a Basic Program: Rock, Paper, Scissors</a>
+  </li>
+  <li class="next">
+    <a href="advanced_data_structures.html"
+       title="next chapter">Advanced Data Structures →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

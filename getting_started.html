@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Getting Started</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Building a Basic Program: Rock, Paper, Scissors" href="rock_paper_scissors.html" />
+  <link rel="prev" title="Installation" href="installation.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Getting Started</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#anatomy-of-a-recolon-program" class="reference internal">Anatomy of a Recolon Program</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Getting Started</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="installation.html"
+       title="previous chapter">← Installation</a>
+  </li>
+  <li class="next">
+    <a href="rock_paper_scissors.html"
+       title="next chapter">Building a Basic Program: Rock, Paper, Scissors →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<section id="anatomy-of-a-recolon-program">
+<h2><strong>Anatomy of a Recolon Program</strong><a class="headerlink" href="#anatomy-of-a-recolon-program" title="Link to this heading">¶</a></h2>
+<p>Let’s review a basic “Hello, world!” program in Recolon. Here’s the first piece of the puzzle:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">main</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>These lines define a function named <code class="docutils literal notranslate"><span class="pre">main</span></code>. In Recolon, every function needs to be explicitly called to be executed. The only exception to this rule is the <code class="docutils literal notranslate"><span class="pre">compose()</span></code> function, which is designed to run automatically when defined.</p>
+<p>The function body is wrapped in curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>. Recolon requires these brackets around all function bodies. It’s considered good practice to place the opening curly bracket on the same line as the function declaration, with a single space in between.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to maintain a consistent style across Recolon projects, consider creating or using a custom formatter tool. Such a tool can help ensure your code adheres to a uniform style, making it easier to read and maintain.</p>
+</div>
+<p>The body of the <code class="docutils literal notranslate"><span class="pre">main</span></code> function holds the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This line is responsible for printing text to the screen. Here are four important details to keep in mind:</p>
+<ol class="arabic simple">
+<li><p><strong>Indentation:</strong> Recolon style is to indent using a tab.</p></li>
+<li><p><strong>Function Calls:</strong> <code class="docutils literal notranslate"><span class="pre">log</span></code> is a built-in function in Recolon. Built-in functions are reserved and cannot be overwritten by redefining them within your code.</p></li>
+<li><p><strong>Strings:</strong> The <code class="docutils literal notranslate"><span class="pre">&quot;Hello,</span> <span class="pre">world!&quot;</span></code> string is passed as an argument to the <code class="docutils literal notranslate"><span class="pre">log</span></code> function, which then outputs the string to the screen.</p></li>
+<li><p><strong>Semicolon:</strong> Each line in Recolon typically ends with a semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>), signaling the end of an expression. This allows the interpreter to know where one statement ends and the next begins.</p></li>
+</ol>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="installation.html"
+       title="previous chapter">← Installation</a>
+  </li>
+  <li class="next">
+    <a href="rock_paper_scissors.html"
+       title="next chapter">Building a Basic Program: Rock, Paper, Scissors →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

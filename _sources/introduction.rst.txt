@@ -1,0 +1,33 @@
+Introduction
+=================================
+
+Welcome to the official documentation for **Recolon**, an experimental programming language designed with simplicity, performance, and safety in mind. Recolon is built using Rust and aims to provide a powerful yet accessible environment for developers to create high-performance applications with minimal complexity.
+
+What is Recolon?
+----------------
+
+Recolon is a new programming language that takes inspiration from Rust's safety and performance features while striving to maintain a user-friendly syntax and structure. It is designed for developers who seek the robustness and speed of a modern language without the steep learning curve often associated with such tools. Recolon supports a variety of essential programming constructs, such as conditional statements, variables, functions, and data structures, making it suitable for both simple scripts and more complex applications.
+
+Why Recolon?
+------------
+
+In today's rapidly evolving tech landscape, developers need tools that allow them to quickly prototype and build robust applications without sacrificing performance. Recolon addresses this need by offering a streamlined syntax combined with the power of a modern compiler, enabling developers to focus on writing clear and efficient code.
+
+Key reasons to explore Recolon include:
+
+- **Simplicity**: Recolon's syntax is designed to be easy to learn, making it accessible to both new and experienced developers.
+- **Performance**: Leveraging the power of Rust, Recolon delivers high-performance execution, making it suitable for resource-intensive tasks.
+- **Safety**: With features inspired by Rust, such as ownership and borrowing, Recolon helps prevent common programming errors, leading to more reliable code.
+- **Flexibility**: Recolon supports modular code organization, allowing developers to build and maintain large projects with ease.
+
+Getting Started
+---------------
+
+To begin your journey with Recolon, check out the onstallation guide to set up the Recolon compiler on your machine. Once installed, you can dive into the getting started section to write your first Recolon program and explore the language's basic features.
+
+Documentation Overview
+-----------------------
+
+This documentation is structured to guide you through all aspects of Recolon, from the basic syntax and features to more advanced topics like data structures, standard modules, and best practices. You'll find detailed explanations, examples, and references to help you make the most out of Recolon.
+
+Whether you're writing simple scripts or building complex applications, Recolon provides the tools you need to develop efficiently and effectively. Let's start exploring!

@@ -1,0 +1,105 @@
+Standard Built-in Modules
+==========================
+
+Recolon comes with several built-in modules that provide essential functions and utilities. These modules are automatically included in every Recolon program, so you don’t need to import them manually. This section will cover the key built-in modules and their functionalities.
+
+**Standard**
+---------------------
+These global functions are available without calling any modules:
+
+- ``clock()``: Returns the current system time or uptime in milliseconds. This can be used for timing events or measuring intervals.
+- ``color_console("text_color", "bg_color", "string")``: Returns a string with the specified text and background colors. If either color is an empty string, the default color is used.
+- ``wait_ms(milliseconds)``: Pauses the execution of the program for the specified number of milliseconds.
+
+**I/O Module (`io`)**
+---------------------
+
+The `io` module provides functions for basic input and output operations. These functions are essential for interacting with users, reading from files, and writing output to the console.
+
+**Reading Input**
+
+You can use the `io.read_input()` function to read input from the user:
+
+.. code-block:: python
+
+    log("Enter your name:");
+    var name = io.read_input();
+    log("Hello, " + name + "!");
+
+In this example, the program prompts the user to enter their name and then greets them using the input.
+
+**File Operations**
+
+The `io` module also provides functions to work with files:
+
+.. code-block:: python
+
+    var content = io.file_open("example.txt");
+    log(content);
+
+This code opens a file named `example.txt` and reads its content. You can extend this to implement file reading and writing in your programs.
+
+**Math Module (`math`)**
+------------------------
+
+The `math` module in Recolon provides a variety of functions and constants for mathematical operations. Below is a list of all the math functions available in Recolon, categorized for clarity.
+
+**Constants**
+
+- ``math.pi``: The value of π (Pi).
+- ``math.e``: The base of the natural logarithm, e.
+- ``math.tau``: The value of τ (Tau), which is 2π.
+- ``math.nan``: Represents "Not-a-Number".
+
+**Numbers**
+
+- ``math.floor(x)``: Returns the largest integer less than or equal to ``x``.
+- ``math.ceil(x)``: Returns the smallest integer greater than or equal to ``x``.
+- ``math.round(x)``: Rounds ``x`` to the nearest integer.
+- ``math.sqrt(x)``: Returns the square root of ``x``.
+- ``math.abs(x)``: Returns the absolute value of ``x``.
+- ``math.min(x, y)``: Returns the smaller of the two numbers ``x`` and ``y``.
+- ``math.max(x, y)``: Returns the larger of the two numbers ``x`` and ``y``.
+- ``math.random(x, y)``: Returns a random number between ``x`` and ``y``.
+
+**Power & Log**
+
+- ``math.pow(x, y)``: Returns ``x`` raised to the power of ``y``.
+- ``math.lgm(x, optional: y)``: Returns the logarithm of ``x``, with an optional base ``y``.
+
+**Trigonometry**
+
+- ``math.sin(x)``: Returns the sine of ``x`` (in radians).
+- ``math.cos(x)``: Returns the cosine of ``x`` (in radians).
+- ``math.tan(x)``: Returns the tangent of ``x`` (in radians).
+
+**Angular**
+
+- ``math.degrees(x)``: Converts ``x`` from radians to degrees.
+- ``math.radians(x)``: Converts ``x`` from degrees to radians.
+
+Reserved Module Names
+----------------------
+
+Recolon reserves the names of its built-in modules. Therefore, you cannot use these names for custom modules or variables in your programs. Attempting to use a reserved name will result in an error.
+
+**List of Reserved Module Names:**
+
+- `io`
+- `math`
+
+If you try to define a variable or import a module with one of these names, Recolon will throw an error. For example:
+
+.. code-block:: python
+
+    var io = "This will cause an error!";
+    log(io);  # Error: 'io' is a reserved module name.
+
+In this example, attempting to use `io` as a variable name will cause a conflict with the built-in `io` module.
+
+---
+
+**Conclusion**
+--------------
+
+The built-in modules in Recolon provide a powerful foundation for building your programs. Whether you need to perform basic input/output operations, work with files, or handle complex mathematical computations, these modules have you covered. By understanding and utilizing these modules, you can write more efficient and effective code in Recolon.

@@ -1,0 +1,114 @@
+Error Handling in Recolon
+==========================
+
+As your programs become more complex, handling errors and unexpected conditions becomes crucial. Recolon provides basic error handling mechanisms through the `log();` and `err();` functions. This chapter will guide you on how to effectively use these functions to detect and manage errors in your code.
+
+Basic Error Handling
+---------------------
+
+In Recolon, you can use conditional statements (`if`, `elif`, `else`) to check for error conditions and respond accordingly. When you encounter an error or want to track the flow of your program, you can use the `log();` function to output messages for debugging or informational purposes.
+
+.. code-block:: python
+
+    fn divide(a, b) {
+        var result;
+
+        if (b == 0) {
+            err("Error: Division by zero is not allowed.");
+            result = nil;
+        } else {
+            result = a / b;
+        }
+        
+        return result;
+    }
+
+    var result = divide(10, 0);  # This will trigger an error message.
+
+In the example above, the `err();` function is used to output an error message when an attempt is made to divide by zero. The function then returns `nil`, signaling that the operation could not be completed.
+
+Built-in Error Functions
+-------------------------
+
+Recolon includes two built-in functions for error handling:
+
+- **`log();`**: This function is used to output informational messages during the execution of your program. It’s useful for debugging and tracking the flow of your code.
+
+  .. code-block:: python
+
+      fn greet_user(name) {
+          log("Greeting user: " + name);
+          return "Hello, " + name + "!";
+      }
+
+      var message = greet_user("Alice");  # Outputs "Greeting user: Alice"
+      print(message);                     # Outputs "Hello, Alice!"
+
+- **`err();`**: This function is used to output error messages. It’s intended to be used when your program encounters a situation that prevents it from proceeding as expected.
+
+  .. code-block:: python
+
+    fn open_file(filename) {
+        var file;
+
+        if (filename == "") {
+            err("Error: Filename cannot be empty.");
+            file = nil;
+        }
+        # Proceed to open the file...
+    }
+
+    open_file("");  # Outputs "Error: Filename cannot be empty."
+
+Custom Error Messages
+----------------------
+
+You can customize error messages to provide more context or specific details about what went wrong in your program. This can make debugging easier and help you quickly identify the source of an issue.
+
+.. code-block:: python
+
+    fn calculate_area(length, width) {
+        var result;
+        if (length <= 0 or width <= 0) {
+            err("Error: Both length and width must be positive values. Received length: " + length + ", width: " + width);
+            result = nil;
+        } else {
+            result = length * width;
+        }
+
+        return result;
+    }
+
+    var area = calculate_area(-5, 10);  # Outputs a custom error message with specific details.
+
+In this example, the error message is tailored to include the actual values that caused the error, making it easier to diagnose the problem.
+
+Common Pitfalls and Debugging
+------------------------------
+
+When developing in Recolon, you might encounter some common issues. Here are a few tips to help you debug effectively:
+
+- **Unexpected `nil` Values:** If a function is returning `nil` unexpectedly, check if you’ve correctly placed your `return` statements. Remember that Recolon returns `nil` if no explicit return statement is reached at the end of a function.
+
+- **Conditional Errors:** Use `err();` within conditional statements to catch and report errors. This is particularly useful when dealing with user input or operations that can fail (e.g., file I/O).
+
+- **Log Everything:** When debugging complex logic, sprinkle `log();` statements throughout your code. This will help you trace the execution flow and pinpoint where things go wrong.
+
+.. code-block:: python
+
+    fn process_data(data) {
+        var result;
+
+        log("Processing data: " + data);
+
+        
+        if (data == nil) {
+            err("Error: Data cannot be nil.");
+            result = nil;
+        }
+        
+        # Further processing...
+        return result;
+    }
+
+By following these practices and utilizing `log();` and `err();`, you can effectively manage and debug errors in your Recolon programs, ensuring they run smoothly.

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Importing Modules in Recolon</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Error Handling in Recolon" href="error_handling.html" />
+  <link rel="prev" title="Functions in Depth" href="functions_in_depth.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Importing Modules in Recolon</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#the-basics-of-importing" class="reference internal">The Basics of Importing</a></li>
+                
+                  <li class="toctree-l2"><a href="#accessing-imported-functions-and-variables" class="reference internal">Accessing Imported Functions and Variables</a></li>
+                
+                  <li class="toctree-l2"><a href="#organizing-your-code-with-imports" class="reference internal">Organizing Your Code with Imports</a></li>
+                
+                  <li class="toctree-l2"><a href="#important-notes-on-imports" class="reference internal">Important Notes on Imports</a></li>
+                
+                  <li class="toctree-l2"><a href="#example-importing-and-using-a-struct" class="reference internal">Example: Importing and Using a Struct</a></li>
+                
+                  <li class="toctree-l2"><a href="#reserved-module-names" class="reference internal">Reserved Module Names</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Importing Modules in Recolon</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="functions_in_depth.html"
+       title="previous chapter">← Functions in Depth</a>
+  </li>
+  <li class="next">
+    <a href="error_handling.html"
+       title="next chapter">Error Handling in Recolon →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="importing-modules-in-recolon">
+<h1>Importing Modules in Recolon<a class="headerlink" href="#importing-modules-in-recolon" title="Link to this heading">¶</a></h1>
+<p>As your Recolon projects grow, you’ll likely find it useful to organize your code into multiple files. Recolon supports importing code from other files, allowing you to reuse functions, structs, and variables across different parts of your program.</p>
+<section id="the-basics-of-importing">
+<h2>The Basics of Importing<a class="headerlink" href="#the-basics-of-importing" title="Link to this heading">¶</a></h2>
+<p>To import another Recolon file, use the <cite>import</cite> statement followed by the path to the file and an alias for the module. This allows you to access the contents of the imported file using the alias.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;./utils&quot;</span> <span class="k">as</span> <span class="n">utils</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In this example, the <cite>utils.rcn</cite> file is imported, and its contents are accessible through the <cite>utils</cite> alias.</p>
+</section>
+<section id="accessing-imported-functions-and-variables">
+<h2>Accessing Imported Functions and Variables<a class="headerlink" href="#accessing-imported-functions-and-variables" title="Link to this heading">¶</a></h2>
+<p>Once a module is imported, you can call its functions or access its variables and structs using the alias.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;./math_helpers&quot;</span> <span class="k">as</span> <span class="n">math_helper</span><span class="p">;</span>
+
+<span class="n">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">math_helper</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1"># Calls the add function from math_helpers.rcn</span>
+<span class="n">log</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>  <span class="c1"># Outputs the result of the addition</span>
+</pre></div>
+</div>
+</section>
+<section id="organizing-your-code-with-imports">
+<h2>Organizing Your Code with Imports<a class="headerlink" href="#organizing-your-code-with-imports" title="Link to this heading">¶</a></h2>
+<p>Imports help in organizing your code into logical units. For instance, you can separate utility functions, math operations, and game logic into different files and import them as needed.</p>
+<p><strong>Example:</strong></p>
+<ol class="arabic">
+<li><p><strong>File:</strong> <cite>math_helpers.rcn</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">fn</span> <span class="n">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>File:</strong> <cite>game_logic.rcn</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;./math_helpers&quot;</span> <span class="k">as</span> <span class="n">math_helper</span><span class="p">;</span>
+
+<span class="n">fn</span> <span class="n">calculate_score</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">math_helper</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>File:</strong> <cite>main.rcn</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;./game_logic&quot;</span> <span class="k">as</span> <span class="n">game</span><span class="p">;</span>
+
+<span class="n">var</span> <span class="n">score</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">calculate_score</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="n">log</span><span class="p">(</span><span class="s2">&quot;Final Score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="important-notes-on-imports">
+<h2>Important Notes on Imports<a class="headerlink" href="#important-notes-on-imports" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Execution Order:</strong> Recolon reads and executes code from top to bottom. Ensure that any functions or variables you wish to use are defined before you try to access them in your main program or any other modules.</p></li>
+<li><p><strong>Circular Dependencies:</strong> Avoid circular imports, where two modules import each other. This can lead to errors and unexpected behavior.</p></li>
+<li><p><strong>Modularity:</strong> Keep your modules focused on specific tasks to maintain clean and maintainable code. For example, place all math-related functions in one module and all string-related functions in another.</p></li>
+</ul>
+</section>
+<section id="example-importing-and-using-a-struct">
+<h2>Example: Importing and Using a Struct<a class="headerlink" href="#example-importing-and-using-a-struct" title="Link to this heading">¶</a></h2>
+<p>You can also import and use structs from other files.</p>
+<p><strong>File:</strong> <cite>player.rcn</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Player</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Unnamed&quot;</span><span class="p">,</span>
+    <span class="n">score</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>File:</strong> <cite>game.rcn</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s2">&quot;./player&quot;</span> <span class="k">as</span> <span class="n">player</span><span class="p">;</span>
+
+<span class="n">var</span> <span class="n">player1</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">Player</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">:</span> <span class="mi">100</span> <span class="p">};</span>
+<span class="n">log</span><span class="p">(</span><span class="n">player1</span><span class="o">.</span><span class="n">name</span><span class="p">);</span>  <span class="c1"># Outputs: Alice</span>
+</pre></div>
+</div>
+<p>This example demonstrates how to import a struct from another file and instantiate it within your main program.</p>
+</section>
+<section id="reserved-module-names">
+<h2>Reserved Module Names<a class="headerlink" href="#reserved-module-names" title="Link to this heading">¶</a></h2>
+<p>Recolon includes a set of standard modules that are automatically loaded into your programs. Because these modules are built-in, their names are reserved and cannot be used as the names of custom imports in your projects. Attempting to import a module with one of these reserved names will result in an error.</p>
+<p>Below is a list of all reserved module names in Recolon:</p>
+<ul class="simple">
+<li><p><strong>io</strong></p></li>
+<li><p><strong>math</strong></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When naming your custom modules, avoid using these reserved names to ensure that your imports work correctly and do not conflict with the built-in functionality provided by Recolon.</p>
+</div>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="functions_in_depth.html"
+       title="previous chapter">← Functions in Depth</a>
+  </li>
+  <li class="next">
+    <a href="error_handling.html"
+       title="next chapter">Error Handling in Recolon →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.. Recolon documentation master file, created by
+   sphinx-quickstart on Sat Aug 17 17:04:26 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to the Recolon Documentation
+=====================================
+
+Recolon is a modern, experimental programming language designed to blend simplicity with powerful capabilities. Whether you're a beginner looking to learn programming or an experienced developer seeking a new tool for your projects, Recolon offers an intuitive syntax and a strong foundation to help you achieve your goals.
+
+This documentation will guide you through everything from setting up your environment to mastering advanced features. Explore the core concepts, standard modules, and unique functionalities that make Recolon stand out.
+
+Get started by setting up Recolon on your machine, then dive into the basics and beyond. Welcome to the Recolon community—let's start coding!
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   introduction
+   installation
+   getting_started
+   rock_paper_scissors
+   programming_concepts
+   advanced_data_structures
+   functions_in_depth
+   imports
+   error_handling
+   standard_modules
+   appendix

@@ -1,0 +1,112 @@
+Importing Modules in Recolon
+============================
+
+As your Recolon projects grow, you'll likely find it useful to organize your code into multiple files. Recolon supports importing code from other files, allowing you to reuse functions, structs, and variables across different parts of your program.
+
+The Basics of Importing
+-----------------------
+
+To import another Recolon file, use the `import` statement followed by the path to the file and an alias for the module. This allows you to access the contents of the imported file using the alias.
+
+.. code-block:: python
+
+    import "./utils" as utils;
+
+In this example, the `utils.rcn` file is imported, and its contents are accessible through the `utils` alias.
+
+Accessing Imported Functions and Variables
+------------------------------------------
+
+Once a module is imported, you can call its functions or access its variables and structs using the alias.
+
+.. code-block:: python
+
+    import "./math_helpers" as math_helper;
+
+    var result = math_helper.add(5, 3);  # Calls the add function from math_helpers.rcn
+    log(result);  # Outputs the result of the addition
+
+Organizing Your Code with Imports
+---------------------------------
+
+Imports help in organizing your code into logical units. For instance, you can separate utility functions, math operations, and game logic into different files and import them as needed.
+
+**Example:**
+
+1. **File:** `math_helpers.rcn`
+
+   .. code-block:: python
+
+       fn add(a, b) {
+           return a + b;
+       }
+
+       fn subtract(a, b) {
+           return a - b;
+       }
+
+2. **File:** `game_logic.rcn`
+
+   .. code-block:: python
+
+       import "./math_helpers" as math_helper;
+
+       fn calculate_score(base, multiplier) {
+           return math_helper.multiply(base, multiplier);
+       }
+
+3. **File:** `main.rcn`
+
+   .. code-block:: python
+
+       import "./game_logic" as game;
+
+       var score = game.calculate_score(10, 5);
+       log("Final Score:", score);
+
+Important Notes on Imports
+--------------------------
+
+- **Execution Order:** Recolon reads and executes code from top to bottom. Ensure that any functions or variables you wish to use are defined before you try to access them in your main program or any other modules.
+  
+- **Circular Dependencies:** Avoid circular imports, where two modules import each other. This can lead to errors and unexpected behavior.
+
+- **Modularity:** Keep your modules focused on specific tasks to maintain clean and maintainable code. For example, place all math-related functions in one module and all string-related functions in another.
+
+Example: Importing and Using a Struct
+-------------------------------------
+
+You can also import and use structs from other files.
+
+**File:** `player.rcn`
+
+.. code-block:: python
+
+    struct Player {
+        name: "Unnamed",
+        score: 0
+    }
+
+**File:** `game.rcn`
+
+.. code-block:: python
+
+    import "./player" as player;
+
+    var player1 = player.Player { name: "Alice", score: 100 };
+    log(player1.name);  # Outputs: Alice
+
+This example demonstrates how to import a struct from another file and instantiate it within your main program.
+
+Reserved Module Names
+---------------------
+
+Recolon includes a set of standard modules that are automatically loaded into your programs. Because these modules are built-in, their names are reserved and cannot be used as the names of custom imports in your projects. Attempting to import a module with one of these reserved names will result in an error.
+
+Below is a list of all reserved module names in Recolon:
+
+- **io**
+- **math**
+
+.. note::
+   When naming your custom modules, avoid using these reserved names to ensure that your imports work correctly and do not conflict with the built-in functionality provided by Recolon.

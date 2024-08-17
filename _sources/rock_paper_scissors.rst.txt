@@ -1,0 +1,157 @@
+Building a Basic Program: Rock, Paper, Scissors
+===============================================
+
+In this section, we'll build a simple "Rock, Paper, Scissors" game using Recolon. This will help you understand how to implement conditional logic, use variables, and interact with users.
+
+Step 1: Set Up the Game Structure
+---------------------------------
+
+First, let's define the basic structure of our program. We'll start by writing a `main` function that initializes the game:
+
+.. code-block:: python
+
+    fn main() {
+        log("Welcome to Rock, Paper, Scissors!");
+        var player_choice = get_player_choice();
+        var computer_choice = get_computer_choice();
+        var result = determine_winner(player_choice, computer_choice);
+        log(result);
+    }
+
+    main();
+
+This code does the following:
+
+- Welcomes the player to the game.
+- Gets the player's choice by calling the `get_player_choice` function.
+- Determines the computer's choice using the `get_computer_choice` function.
+- Decides the winner by comparing the player's choice with the computer's choice using the `determine_winner` function.
+- Logs the result of the game.
+
+.. note::
+The Recolon interpreter reads code from top to bottom. This means that if you try to call a function before it is defined in your code, the interpreter will throw an error. Make sure all functions are defined before they are called.
+
+Step 2: Get the Player's Choice
+-------------------------------
+
+Next, we'll define the `get_player_choice` function, which prompts the player to enter their choice:
+
+.. code-block:: python
+
+    fn get_player_choice() {
+        log("Enter your choice (rock, paper, scissors):");
+        var choice = io.read_input();
+        return choice;
+    }
+
+This function:
+
+- Prompts the player to enter their choice.
+- Reads the input using the `io.read_input()` function.
+- Returns the player's choice to be used in the game.
+
+Step 3: Generate the Computer's Choice
+--------------------------------------
+
+Now, let's define the `get_computer_choice` function, which randomly selects rock, paper, or scissors:
+
+.. code-block:: python
+
+    fn get_computer_choice() {
+        var choices = ["rock", "paper", "scissors"];
+        var index = math.random(0, 2);
+        return choices[index];
+    }
+
+This function:
+
+- Defines an array with the possible choices: "rock", "paper", and "scissors".
+- Randomly selects one of the choices using the `math.random()` function.
+- Returns the computer's choice.
+
+Step 4: Determine the Winner
+----------------------------
+
+Finally, we'll define the `determine_winner` function, which compares the player's choice with the computer's choice to determine the winner:
+
+.. code-block:: python
+    
+    fn determine_winner(player, computer) {
+        var winner;
+
+        if (player == computer) {
+            winner = "It's a tie!";
+        } elif (player == "rock" and computer == "scissors") {
+            winner = "You win! Rock beats Scissors.";
+        } elif (player == "scissors" and computer == "paper") {
+            winner = "You win! Scissors beats Paper.";
+        } elif (player == "paper" and computer == "rock") {
+            winner = "You win! Paper beats Rock.";
+        } else {
+            winner = "You lose!";
+        }
+
+        return winner;
+    }
+
+This function:
+
+- Compares the player's choice with the computer's choice.
+- Returns a message indicating whether the player won, lost, or tied.
+
+.. note::
+Return statements in Recolon should always be placed at the end of functions. If a return statement is not the last line of the function, or if there are unreachable lines of code after the return statement, the function will return nil by default.
+
+Step 5: Run the Program
+-----------------------
+
+With all the pieces in place, you can now run the program. Save your code in a `.rcn` file and execute it using the Recolon interpreter. The program will prompt you for your choice, generate the computer's choice, and determine the winner.
+
+Your program should look like this: 
+
+.. code-block:: python
+
+    fn get_player_choice() {
+        print("Enter your choice (rock, paper, scissors):");
+        var choice = io.read_input();
+        return choice;
+    }
+
+    fn get_computer_choice() {
+        var choices = ["rock", "paper", "scissors"];
+        var index = math.random(0, 2);
+        return choices[index];
+    }
+
+    fn determine_winner(player, computer) {
+        var winner;
+
+        if (player == computer) {
+            winner = "It's a tie!";
+        } elif (player == "rock" and computer == "scissors") {
+            winner = "You win! Rock beats Scissors.";
+        } elif (player == "scissors" and computer == "paper") {
+            winner = "You win! Scissors beats Paper.";
+        } elif (player == "paper" and computer == "rock") {
+            winner = "You win! Paper beats Rock.";
+        } else {
+            winner = "You lose!";
+        }
+
+        return winner;
+    }
+
+    fn main() {
+        print("Welcome to Rock, Paper, Scissors!");
+        var player_choice = get_player_choice();
+        var computer_choice = get_computer_choice();
+        var result = determine_winner(player_choice, computer_choice);
+        print(result);
+    }
+
+    main();
+
+.. note::
+   This basic program demonstrates core Recolon concepts such as functions, conditionals, and input/output. You can expand this game by adding more features, such as allowing the player to play multiple rounds or keeping track of the score.
+
+By following these steps, you've created a simple yet complete "Rock, Paper, Scissors" game in Recolon. This exercise should give you a solid understanding of how to use Recolon's basic features to build interactive programs.

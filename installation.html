@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Installation</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Getting Started" href="getting_started.html" />
+  <link rel="prev" title="Introduction" href="introduction.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Installation</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#installation" class="reference internal">Installation</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Installation</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="introduction.html"
+       title="previous chapter">← Introduction</a>
+  </li>
+  <li class="next">
+    <a href="getting_started.html"
+       title="next chapter">Getting Started →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<p>To begin using Recolon, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Clone the Recolon Repository</strong>
+- Start by cloning the Recolon repository from the official source:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Breijen/recolon
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Navigate to the root of the cloned repository:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>recolon
+</pre></div>
+</div>
+</li>
+<li><p><strong>Build the Recolon Compiler</strong>
+- Recolon is built using Rust, so ensure you have Rust installed on your machine. If not, you can install it by following the instructions on the <a class="reference external" href="https://www.rust-lang.org/tools/install">official Rust website</a>.
+- To build the Recolon compiler, run the following command in the root of the Recolon repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cargo<span class="w"> </span>build<span class="w"> </span>--release
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>This command compiles the Recolon compiler, producing an executable that you can use to run your <cite>.rcn</cite> files.</p></li>
+</ul>
+</li>
+<li><p><strong>Run Your First Recolon Program</strong>
+- After building the compiler, you’re ready to run your first Recolon program.</p>
+<ul class="simple">
+<li><p>Create a new file with the <cite>.rcn</cite> extension.</p></li>
+<li><p>Open the file in your preferred text editor and add the following code:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello, Recolon!&quot;</span><span class="p">;</span>
+<span class="n">log</span><span class="p">(</span><span class="n">greeting</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Save the file and execute it using the Recolon interpreter:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./target/release/recolon<span class="w"> </span>hello_world.rcn
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You should see the following output in your terminal:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LOG &quot;Hello, Recolon!&quot;
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Now you’re all set to explore Recolon and start developing your own programs!</p>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="introduction.html"
+       title="previous chapter">← Introduction</a>
+  </li>
+  <li class="next">
+    <a href="getting_started.html"
+       title="next chapter">Getting Started →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,37 @@
+Getting Started
+============================
+**Anatomy of a Recolon Program**
+---------------------------------
+
+Let’s review a basic "Hello, world!" program in Recolon. Here’s the first piece of the puzzle:
+
+.. code-block:: python
+
+    fn main() {
+
+    }
+
+    main();
+
+These lines define a function named ``main``. In Recolon, every function needs to be explicitly called to be executed. The only exception to this rule is the ``compose()`` function, which is designed to run automatically when defined.
+
+The function body is wrapped in curly brackets ``{}``. Recolon requires these brackets around all function bodies. It’s considered good practice to place the opening curly bracket on the same line as the function declaration, with a single space in between.
+
+.. note::
+   If you want to maintain a consistent style across Recolon projects, consider creating or using a custom formatter tool. Such a tool can help ensure your code adheres to a uniform style, making it easier to read and maintain.
+
+The body of the ``main`` function holds the following code:
+
+.. code-block:: python
+
+    log("Hello, world!");
+
+This line is responsible for printing text to the screen. Here are four important details to keep in mind:
+
+1. **Indentation:** Recolon style is to indent using a tab.
+
+2. **Function Calls:** ``log`` is a built-in function in Recolon. Built-in functions are reserved and cannot be overwritten by redefining them within your code.
+
+3. **Strings:** The ``"Hello, world!"`` string is passed as an argument to the ``log`` function, which then outputs the string to the screen.
+
+4. **Semicolon:** Each line in Recolon typically ends with a semicolon (``;``), signaling the end of an expression. This allows the interpreter to know where one statement ends and the next begins.

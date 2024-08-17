@@ -1,0 +1,144 @@
+Advanced Data Structures
+========================
+
+Data structures are essential for organizing and managing data efficiently in your Recolon programs. In this section, we’ll explore the two primary data structures available in Recolon: **arrays** and **structs**.
+
+1. Arrays
+---------
+
+An **array** is a collection of elements, each identified by an index. Arrays in Recolon can hold elements of any type, and the elements can be accessed by their index. However, arrays in Recolon cannot be modified directly after creation. You can only add or remove elements from the end of the array.
+
+**Creating Arrays**
+
+Arrays are created using square brackets ``[]``. Here’s an example of how to create an array with integer elements:
+
+.. code-block:: python
+
+    var numbers = [1, 2, 3, 4, 5];
+
+You can also create arrays with different types of elements:
+
+.. code-block:: python
+
+    var mixedArray = [1, "two", 3.0, true];
+
+**Accessing Array Elements**
+
+Elements in an array are accessed using their index. The index starts from ``0``:
+
+.. code-block:: python
+
+    var firstElement = numbers[0];  # Accesses the first element, which is 1
+    var secondElement = mixedArray[1];  # Accesses the second element, which is "two"
+
+**Array Operations**
+
+Recolon supports a few operations on arrays, such as adding or removing elements from the end and getting the array's length:
+
+.. code-block:: python
+
+    # Adding to an array
+    numbers.push(6);
+
+    # Removing the last element from an array
+    var lastElement = numbers.pop();
+
+    # Getting the length of an array
+    var arrayLength = numbers.length;
+
+Remember, arrays in Recolon are immutable in terms of direct modification. You can only change the array by adding or removing elements from the end.
+
+2. Structs
+----------
+
+A **struct** in Recolon is a custom data type that allows you to group related data together. Each piece of data inside a struct is called a field.
+
+**Defining Structs**
+
+Structs are defined using the ``struct`` keyword followed by the struct's name and fields. Here’s an example of how to define a struct:
+
+.. code-block:: python
+
+    struct Player {
+        name: "Unknown",
+        score: 0,
+        is_active: true
+    }
+
+This example defines a ``Player`` struct with three fields: ``name``, ``score``, and ``is_active``. The fields are initialized with default values.
+
+**Creating Struct Instances**
+
+You can create instances of a struct by calling the struct's name and optionally passing values for its fields:
+
+.. code-block:: python
+
+    var player1 = Player {};
+    var player2 = Player {
+        name: "Alice", 
+        score: 100
+    };
+
+In this example, ``player1`` is created with default field values, while ``player2`` is created with custom values for ``name`` and ``score``.
+
+**Accessing and Modifying Struct Fields**
+
+Fields of a struct instance are accessed and modified using the dot ``.`` notation:
+
+.. code-block:: python
+
+    log(player1.name);  # Outputs "Unknown"
+    player2.score = 150;  # Updates Alice's score to 150
+
+**Using Structs in Functions**
+
+Structs can be passed to functions, and you can access or modify their fields within those functions:
+
+.. code-block:: python
+
+    fn update_score(player, new_score) {
+        player.score = new_score;
+        print(player.score);
+        return player;  # Return the modified struct
+    }
+
+    player2 = update_score(player2, 200);
+
+This, however, will not work.
+
+.. code-block:: python
+
+    fn update_score(player, new_score) {
+        player.score = new_score;
+    }
+
+    update_score(player2, 200);
+
+**Nested Structs**
+
+You can also define structs within structs, allowing you to create more complex data structures:
+
+.. code-block:: python
+
+    struct TeamMember {
+        name: "Team A",
+        member: Player { name: "Alice" }
+    }
+
+    var myTeam = Team {};
+    var member = myTeam.member;
+    log(member.name);  # Outputs "Alice"
+
+.. note::
+    Currently, Recolon is still under development for supporting arrays within structs for even more complex data structures.
+
+Summary
+-------
+
+Arrays and structs are fundamental data structures in Recolon that allow you to organize and manipulate data efficiently. Arrays are used to store ordered collections of elements, while structs provide a way to group related data into a single unit. By mastering these data structures, you can write more powerful and flexible Recolon programs.
+
+This section provides a solid foundation in working with arrays and structs in Recolon. As you become more comfortable with these concepts, you can explore more advanced topics such as nested structs, dynamic arrays, and more.
+
+Coming soon
+-----------
+- Dictionaries 

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Advanced Data Structures</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Functions in Depth" href="functions_in_depth.html" />
+  <link rel="prev" title="Common Programming Concepts" href="programming_concepts.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Advanced Data Structures</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#arrays" class="reference internal">1. Arrays</a></li>
+                
+                  <li class="toctree-l2"><a href="#structs" class="reference internal">2. Structs</a></li>
+                
+                  <li class="toctree-l2"><a href="#summary" class="reference internal">Summary</a></li>
+                
+                  <li class="toctree-l2"><a href="#coming-soon" class="reference internal">Coming soon</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="standard_modules.html" class="reference internal ">Standard Built-in Modules</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Advanced Data Structures</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="programming_concepts.html"
+       title="previous chapter">← Common Programming Concepts</a>
+  </li>
+  <li class="next">
+    <a href="functions_in_depth.html"
+       title="next chapter">Functions in Depth →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="advanced-data-structures">
+<h1>Advanced Data Structures<a class="headerlink" href="#advanced-data-structures" title="Link to this heading">¶</a></h1>
+<p>Data structures are essential for organizing and managing data efficiently in your Recolon programs. In this section, we’ll explore the two primary data structures available in Recolon: <strong>arrays</strong> and <strong>structs</strong>.</p>
+<section id="arrays">
+<h2>1. Arrays<a class="headerlink" href="#arrays" title="Link to this heading">¶</a></h2>
+<p>An <strong>array</strong> is a collection of elements, each identified by an index. Arrays in Recolon can hold elements of any type, and the elements can be accessed by their index. However, arrays in Recolon cannot be modified directly after creation. You can only add or remove elements from the end of the array.</p>
+<p><strong>Creating Arrays</strong></p>
+<p>Arrays are created using square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Here’s an example of how to create an array with integer elements:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>You can also create arrays with different types of elements:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">mixedArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">true</span><span class="p">];</span>
+</pre></div>
+</div>
+<p><strong>Accessing Array Elements</strong></p>
+<p>Elements in an array are accessed using their index. The index starts from <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">firstElement</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1"># Accesses the first element, which is 1</span>
+<span class="n">var</span> <span class="n">secondElement</span> <span class="o">=</span> <span class="n">mixedArray</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>  <span class="c1"># Accesses the second element, which is &quot;two&quot;</span>
+</pre></div>
+</div>
+<p><strong>Array Operations</strong></p>
+<p>Recolon supports a few operations on arrays, such as adding or removing elements from the end and getting the array’s length:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adding to an array</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="c1"># Removing the last element from an array</span>
+<span class="n">var</span> <span class="n">lastElement</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">();</span>
+
+<span class="c1"># Getting the length of an array</span>
+<span class="n">var</span> <span class="n">arrayLength</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Remember, arrays in Recolon are immutable in terms of direct modification. You can only change the array by adding or removing elements from the end.</p>
+</section>
+<section id="structs">
+<h2>2. Structs<a class="headerlink" href="#structs" title="Link to this heading">¶</a></h2>
+<p>A <strong>struct</strong> in Recolon is a custom data type that allows you to group related data together. Each piece of data inside a struct is called a field.</p>
+<p><strong>Defining Structs</strong></p>
+<p>Structs are defined using the <code class="docutils literal notranslate"><span class="pre">struct</span></code> keyword followed by the struct’s name and fields. Here’s an example of how to define a struct:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Player</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+    <span class="n">score</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">is_active</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This example defines a <code class="docutils literal notranslate"><span class="pre">Player</span></code> struct with three fields: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">score</span></code>, and <code class="docutils literal notranslate"><span class="pre">is_active</span></code>. The fields are initialized with default values.</p>
+<p><strong>Creating Struct Instances</strong></p>
+<p>You can create instances of a struct by calling the struct’s name and optionally passing values for its fields:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span> <span class="p">{};</span>
+<span class="n">var</span> <span class="n">player2</span> <span class="o">=</span> <span class="n">Player</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="n">score</span><span class="p">:</span> <span class="mi">100</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">player1</span></code> is created with default field values, while <code class="docutils literal notranslate"><span class="pre">player2</span></code> is created with custom values for <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">score</span></code>.</p>
+<p><strong>Accessing and Modifying Struct Fields</strong></p>
+<p>Fields of a struct instance are accessed and modified using the dot <code class="docutils literal notranslate"><span class="pre">.</span></code> notation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="n">player1</span><span class="o">.</span><span class="n">name</span><span class="p">);</span>  <span class="c1"># Outputs &quot;Unknown&quot;</span>
+<span class="n">player2</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>  <span class="c1"># Updates Alice&#39;s score to 150</span>
+</pre></div>
+</div>
+<p><strong>Using Structs in Functions</strong></p>
+<p>Structs can be passed to functions, and you can access or modify their fields within those functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">update_score</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">new_score</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">new_score</span><span class="p">;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">player</span><span class="p">;</span>  <span class="c1"># Return the modified struct</span>
+<span class="p">}</span>
+
+<span class="n">player2</span> <span class="o">=</span> <span class="n">update_score</span><span class="p">(</span><span class="n">player2</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This, however, will not work.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="n">update_score</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">new_score</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">new_score</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">update_score</span><span class="p">(</span><span class="n">player2</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Nested Structs</strong></p>
+<p>You can also define structs within structs, allowing you to create more complex data structures:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">TeamMember</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Team A&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="p">:</span> <span class="n">Player</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">myTeam</span> <span class="o">=</span> <span class="n">Team</span> <span class="p">{};</span>
+<span class="n">var</span> <span class="n">member</span> <span class="o">=</span> <span class="n">myTeam</span><span class="o">.</span><span class="n">member</span><span class="p">;</span>
+<span class="n">log</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="p">);</span>  <span class="c1"># Outputs &quot;Alice&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, Recolon is still under development for supporting arrays within structs for even more complex data structures.</p>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h2>
+<p>Arrays and structs are fundamental data structures in Recolon that allow you to organize and manipulate data efficiently. Arrays are used to store ordered collections of elements, while structs provide a way to group related data into a single unit. By mastering these data structures, you can write more powerful and flexible Recolon programs.</p>
+<p>This section provides a solid foundation in working with arrays and structs in Recolon. As you become more comfortable with these concepts, you can explore more advanced topics such as nested structs, dynamic arrays, and more.</p>
+</section>
+<section id="coming-soon">
+<h2>Coming soon<a class="headerlink" href="#coming-soon" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Dictionaries</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="programming_concepts.html"
+       title="previous chapter">← Common Programming Concepts</a>
+  </li>
+  <li class="next">
+    <a href="functions_in_depth.html"
+       title="next chapter">Functions in Depth →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

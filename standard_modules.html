@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Standard Built-in Modules</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Appendix" href="appendix.html" />
+  <link rel="prev" title="Error Handling in Recolon" href="error_handling.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Recolon</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-recolon-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="introduction.html" class="reference internal ">Introduction</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="installation.html" class="reference internal ">Installation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="rock_paper_scissors.html" class="reference internal ">Building a Basic Program: Rock, Paper, Scissors</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="programming_concepts.html" class="reference internal ">Common Programming Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="advanced_data_structures.html" class="reference internal ">Advanced Data Structures</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions_in_depth.html" class="reference internal ">Functions in Depth</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="imports.html" class="reference internal ">Importing Modules in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling in Recolon</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Standard Built-in Modules</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#standard" class="reference internal">Standard</a></li>
+                
+                  <li class="toctree-l2"><a href="#i-o-module-io" class="reference internal">I/O Module (`io`)</a></li>
+                
+                  <li class="toctree-l2"><a href="#math-module-math" class="reference internal">Math Module (`math`)</a></li>
+                
+                  <li class="toctree-l2"><a href="#reserved-module-names" class="reference internal">Reserved Module Names</a></li>
+                
+                  <li class="toctree-l2"><a href="#conclusion" class="reference internal">Conclusion</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="appendix.html" class="reference internal ">Appendix</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Standard Built-in Modules</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="error_handling.html"
+       title="previous chapter">← Error Handling in Recolon</a>
+  </li>
+  <li class="next">
+    <a href="appendix.html"
+       title="next chapter">Appendix →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="standard-built-in-modules">
+<h1>Standard Built-in Modules<a class="headerlink" href="#standard-built-in-modules" title="Link to this heading">¶</a></h1>
+<p>Recolon comes with several built-in modules that provide essential functions and utilities. These modules are automatically included in every Recolon program, so you don’t need to import them manually. This section will cover the key built-in modules and their functionalities.</p>
+<section id="standard">
+<h2><strong>Standard</strong><a class="headerlink" href="#standard" title="Link to this heading">¶</a></h2>
+<p>These global functions are available without calling any modules:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clock()</span></code>: Returns the current system time or uptime in milliseconds. This can be used for timing events or measuring intervals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color_console(&quot;text_color&quot;,</span> <span class="pre">&quot;bg_color&quot;,</span> <span class="pre">&quot;string&quot;)</span></code>: Returns a string with the specified text and background colors. If either color is an empty string, the default color is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wait_ms(milliseconds)</span></code>: Pauses the execution of the program for the specified number of milliseconds.</p></li>
+</ul>
+</section>
+<section id="i-o-module-io">
+<h2><strong>I/O Module (`io`)</strong><a class="headerlink" href="#i-o-module-io" title="Link to this heading">¶</a></h2>
+<p>The <cite>io</cite> module provides functions for basic input and output operations. These functions are essential for interacting with users, reading from files, and writing output to the console.</p>
+<p><strong>Reading Input</strong></p>
+<p>You can use the <cite>io.read_input()</cite> function to read input from the user:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Enter your name:&quot;</span><span class="p">);</span>
+<span class="n">var</span> <span class="n">name</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_input</span><span class="p">();</span>
+<span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this example, the program prompts the user to enter their name and then greets them using the input.</p>
+<p><strong>File Operations</strong></p>
+<p>The <cite>io</cite> module also provides functions to work with files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">content</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">file_open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">);</span>
+<span class="n">log</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This code opens a file named <cite>example.txt</cite> and reads its content. You can extend this to implement file reading and writing in your programs.</p>
+</section>
+<section id="math-module-math">
+<h2><strong>Math Module (`math`)</strong><a class="headerlink" href="#math-module-math" title="Link to this heading">¶</a></h2>
+<p>The <cite>math</cite> module in Recolon provides a variety of functions and constants for mathematical operations. Below is a list of all the math functions available in Recolon, categorized for clarity.</p>
+<p><strong>Constants</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math.pi</span></code>: The value of π (Pi).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.e</span></code>: The base of the natural logarithm, e.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.tau</span></code>: The value of τ (Tau), which is 2π.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.nan</span></code>: Represents “Not-a-Number”.</p></li>
+</ul>
+<p><strong>Numbers</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math.floor(x)</span></code>: Returns the largest integer less than or equal to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.ceil(x)</span></code>: Returns the smallest integer greater than or equal to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.round(x)</span></code>: Rounds <code class="docutils literal notranslate"><span class="pre">x</span></code> to the nearest integer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.sqrt(x)</span></code>: Returns the square root of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.abs(x)</span></code>: Returns the absolute value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.min(x,</span> <span class="pre">y)</span></code>: Returns the smaller of the two numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.max(x,</span> <span class="pre">y)</span></code>: Returns the larger of the two numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.random(x,</span> <span class="pre">y)</span></code>: Returns a random number between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+</ul>
+<p><strong>Power &amp; Log</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math.pow(x,</span> <span class="pre">y)</span></code>: Returns <code class="docutils literal notranslate"><span class="pre">x</span></code> raised to the power of <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.lgm(x,</span> <span class="pre">optional:</span> <span class="pre">y)</span></code>: Returns the logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>, with an optional base <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+</ul>
+<p><strong>Trigonometry</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math.sin(x)</span></code>: Returns the sine of <code class="docutils literal notranslate"><span class="pre">x</span></code> (in radians).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.cos(x)</span></code>: Returns the cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code> (in radians).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.tan(x)</span></code>: Returns the tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code> (in radians).</p></li>
+</ul>
+<p><strong>Angular</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math.degrees(x)</span></code>: Converts <code class="docutils literal notranslate"><span class="pre">x</span></code> from radians to degrees.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math.radians(x)</span></code>: Converts <code class="docutils literal notranslate"><span class="pre">x</span></code> from degrees to radians.</p></li>
+</ul>
+</section>
+<section id="reserved-module-names">
+<h2>Reserved Module Names<a class="headerlink" href="#reserved-module-names" title="Link to this heading">¶</a></h2>
+<p>Recolon reserves the names of its built-in modules. Therefore, you cannot use these names for custom modules or variables in your programs. Attempting to use a reserved name will result in an error.</p>
+<p><strong>List of Reserved Module Names:</strong></p>
+<ul class="simple">
+<li><p><cite>io</cite></p></li>
+<li><p><cite>math</cite></p></li>
+</ul>
+<p>If you try to define a variable or import a module with one of these names, Recolon will throw an error. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">io</span> <span class="o">=</span> <span class="s2">&quot;This will cause an error!&quot;</span><span class="p">;</span>
+<span class="n">log</span><span class="p">(</span><span class="n">io</span><span class="p">);</span>  <span class="c1"># Error: &#39;io&#39; is a reserved module name.</span>
+</pre></div>
+</div>
+<p>In this example, attempting to use <cite>io</cite> as a variable name will cause a conflict with the built-in <cite>io</cite> module.</p>
+<p>—</p>
+</section>
+<section id="conclusion">
+<h2><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>The built-in modules in Recolon provide a powerful foundation for building your programs. Whether you need to perform basic input/output operations, work with files, or handle complex mathematical computations, these modules have you covered. By understanding and utilizing these modules, you can write more efficient and effective code in Recolon.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="error_handling.html"
+       title="previous chapter">← Error Handling in Recolon</a>
+  </li>
+  <li class="next">
+    <a href="appendix.html"
+       title="next chapter">Appendix →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Bryan van der Laan.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,53 @@
+Installation
+============
+
+To begin using Recolon, follow these steps:
+
+1. **Clone the Recolon Repository**
+   - Start by cloning the Recolon repository from the official source:
+   
+   .. code-block:: bash
+
+      git clone https://github.com/Breijen/recolon
+
+   - Navigate to the root of the cloned repository:
+
+   .. code-block:: bash
+
+      cd recolon
+
+2. **Build the Recolon Compiler**
+   - Recolon is built using Rust, so ensure you have Rust installed on your machine. If not, you can install it by following the instructions on the `official Rust website <https://www.rust-lang.org/tools/install>`_.
+   - To build the Recolon compiler, run the following command in the root of the Recolon repository:
+
+   .. code-block:: bash
+
+      cargo build --release
+
+   - This command compiles the Recolon compiler, producing an executable that you can use to run your `.rcn` files.
+
+3. **Run Your First Recolon Program**
+   - After building the compiler, you’re ready to run your first Recolon program. 
+
+   - Create a new file with the `.rcn` extension.
+
+   - Open the file in your preferred text editor and add the following code:
+
+   .. code-block:: python
+
+      var greeting = "Hello, Recolon!";
+      log(greeting);
+
+   - Save the file and execute it using the Recolon interpreter:
+
+   .. code-block:: bash
+
+      ./target/release/recolon hello_world.rcn
+
+   - You should see the following output in your terminal:
+
+   .. code-block:: text
+
+      LOG "Hello, Recolon!"
+
+Now you're all set to explore Recolon and start developing your own programs!

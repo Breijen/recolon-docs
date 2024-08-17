@@ -1,0 +1,155 @@
+Common Programming Concepts
+============================
+
+This section covers the fundamental concepts you need to understand when programming in Recolon.
+
+Variables and Mutability
+-----------------------
+
+In Recolon, variables are declared using the ``var`` keyword. By default, all variables in Recolon are mutable, meaning their values can be changed after they are initialized.
+
+.. code-block:: python
+
+    var x = 5;
+    x = 10;
+
+If you want to make a variable immutable, you can use the ``const`` keyword instead.
+
+.. code-block:: python
+
+    const y = 15;
+
+Attempting to reassign a value to ``y`` will result in a compilation error.
+
+.. note::
+   Unlike some languages, Recolon does not require an explicit type declaration for variables, as it uses type inference to determine the type of the variable based on the initial value.
+
+Data Types
+----------
+
+Recolon supports several basic data types, including:
+
+- **Numbers**: Represented by integers and floating-point numbers.
+
+  .. code-block:: python
+
+      var int_num = 42;
+      var float_num = 3.14;
+
+- **Strings**: Textual data enclosed in double quotes.
+
+  .. code-block:: python
+
+      var message = "Hello, Recolon!";
+
+- **Booleans**: Logical values represented by ``true`` and ``false``.
+
+  .. code-block:: python
+
+      var is_valid = true;
+      var is_empty = false;
+
+ .. note:: 
+    True and false should always be lowercase.
+
+- **Arrays**: Ordered collections of elements.
+
+  .. code-block:: python
+
+      var numbers = [1, 2, 3, 4, 5];
+
+- **Structs**: Custom data types that group related variables together.
+
+  .. code-block:: python
+
+      struct Player {
+          name: "Unnamed",
+          score: 0
+      }
+
+Recolon also supports more complex types, but these are the basics you need to know to get started.
+
+Functions
+---------
+
+Functions in Recolon are defined using the ``fn`` keyword, followed by the function name and a set of parentheses. The function body is enclosed in curly braces.
+
+.. code-block:: python
+
+    fn greet(name) {
+        log("Hello, " + name + "!");
+    }
+
+    greet("Recolon");
+
+Functions can take parameters and return values using the ``return`` keyword.
+
+.. code-block:: python
+
+    fn add(a, b) {
+        return a + b;
+    }
+
+    var sum = add(3, 4);  // sum now holds the value 7
+
+Comments
+--------
+
+Comments in Recolon are denoted by the ``#`` symbol. Anything following the ``#`` on a line will be ignored by the interpreter.
+
+.. code-block:: python
+
+    var x = 10;  # This is a comment
+    # This entire line is a comment
+
+Use comments to explain code, describe what functions do, or to temporarily disable lines of code.
+
+Control Flow
+------------
+
+Recolon supports standard control flow structures, including:
+
+- **Conditional Statements**: ``if``, ``elif``, and ``else`` are used to control the flow of the program based on conditions.
+
+  .. code-block:: python
+
+      var x = 10;
+
+      if (x > 0) {
+          log("x is positive");
+      } elif (x < 0) {
+          log("x is negative");
+      } else {
+          log("x is zero");
+      }
+
+- **Loops**: ``for`` and ``while`` loops are used to repeat code multiple times.
+
+  .. code-block:: python
+
+      for (var i = 0; i < 5; i = i + 1) {
+          log(i);
+      }
+
+      var count = 0;
+      while (count < 5) {
+          log(count);
+          count = count + 1;
+      }
+
+- **Compose**: Recolon introduces a unique looping construct called compose, which operates similarly to a while true loop. This loop continuously runs during the entire runtime of your program, making it ideal for scenarios where you need ongoing execution.
+
+  .. code-block:: python
+
+      compose () {
+        # Your code goes here
+      }
+
+This construct is particularly useful for tasks that require constant monitoring, updating, or interaction without a predefined end. However, it's important to manage the code inside the compose loop carefully to avoid infinite loops or performance issues.
+
+- **No Recursion Allowed**: Recolon does not support recursion due to the potential risks of stack overflow, infinite loops, and the complexity it introduces into the control flow. Instead, Recolon encourages iterative approaches using loops for repetitive tasks.
+
+  .. note::
+     All return statements in Recolon must be at the end of the function. This requirement ensures that functions have a clear and predictable exit point, enhancing code readability and maintainability.
+
+By understanding these control flow constructs and restrictions, you'll be able to write clear, efficient, and safe Recolon programs.

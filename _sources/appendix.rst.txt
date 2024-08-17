@@ -1,0 +1,73 @@
+Appendix
+===================================================
+
+This appendix provides a comprehensive list of all the keywords, operators, and symbols used in the Recolon programming language.
+
+A: Keywords
+-----------
+
+The following keywords are reserved in Recolon and cannot be used as identifiers (e.g., variable names, function names):
+
+- ``fn``: Used to define a function.
+- ``var``: Used to declare a variable.
+- ``if``: Conditional statement.
+- ``elif``: Else-if conditional statement.
+- ``else``: Else conditional statement.
+- ``for``: For loop.
+- ``while``: While loop.
+- ``compose``: Special loop that runs continuously.
+- ``return``: Returns a value from a function.
+- ``struct``: Used to define a structure.
+- ``import``: Used to import modules.
+- ``log``: Logs information.
+- ``err``: Logs an error message.
+- ``true``: Boolean true value.
+- ``false``: Boolean false value.
+- ``nil``: Represents a null or undefined value.
+
+B: Operators
+------------
+
+Recolon supports the following operators for performing various operations:
+
+**Arithmetic Operators**
+
+- ``+``: Addition
+- ``-``: Subtraction
+- ``*``: Multiplication
+- ``/``: Division
+
+**Comparison Operators**
+
+- ``==``: Equal to
+- ``!=``: Not equal to
+- ``>``: Greater than
+- ``<``: Less than
+- ``>=``: Greater than or equal to
+- ``<=``: Less than or equal to
+
+**Logical Operators**
+
+- ``and``: Logical AND
+- ``or``: Logical OR
+- ``!``: Logical NOT
+
+**Assignment Operators**
+
+- ``=``: Assignment
+
+C: Symbols
+----------
+
+The following symbols are used in Recolon syntax for various structural purposes:
+
+- ``(`` and ``)``: Parentheses, used for grouping expressions and function parameters.
+- ``{`` and ``}``: Curly braces, used to define blocks of code (e.g., function bodies, loops).
+- ``[`` and ``]``: Square brackets, used for array literals and indexing.
+- ``,``: Comma, used to separate elements in arrays or function arguments.
+- ``;``: Semicolon, used to terminate statements.
+- ``:``: Colon, used in struct definitions to separate field names from values.
+- ``.``: Dot, used for accessing fields in structs or calling methods on objects.
+- ``"`` and ``'``: Double and single quotes, used to define string literals.
+
+This appendix serves as a quick reference guide for the syntax elements that form the foundation of Recolon programming.
