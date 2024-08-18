@@ -37,13 +37,9 @@ Imports help in organizing your code into logical units. For instance, you can s
 
    .. code-block:: python
 
-       fn add(a, b) {
-           return a + b;
-       }
-
-       fn subtract(a, b) {
-           return a - b;
-       }
+        fn multiply(a, b) {
+            return a * b;
+        }
 
 2. **File:** `game_logic.rcn`
 
